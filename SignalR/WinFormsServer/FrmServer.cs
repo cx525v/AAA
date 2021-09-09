@@ -157,7 +157,7 @@ namespace WinFormsServer
 
             if (rdToAll.Checked)
             {
-                hubContext.Clients.All.addMessage("SERVER", txtMessage.Text);
+               hubContext.Clients.All.addMessage("SERVER", txtMessage.Text);
             }
             else if (rdToGroup.Checked)
             {
@@ -177,4 +177,9 @@ namespace WinFormsServer
                 txtLog.AppendText(log + Environment.NewLine);
         }
     }
+
+    //class Employee
+    //{
+    //    public string Name { get; set; }
+    //}
 }

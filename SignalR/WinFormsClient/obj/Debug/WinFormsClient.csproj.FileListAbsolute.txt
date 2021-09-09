@@ -1,0 +1,16 @@
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\bin\Debug\SgClient1.exe.config
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\bin\Debug\SgClient1.exe
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\bin\Debug\SgClient1.pdb
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\bin\Debug\Microsoft.AspNet.SignalR.Client.pdb
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\obj\Debug\WinFormsClient.csprojAssemblyReference.cache
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\obj\Debug\WinFormsClient.FrmClient.resources
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\obj\Debug\SgClient1.Properties.Resources.resources
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\obj\Debug\WinFormsClient.csproj.GenerateResource.cache
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\obj\Debug\WinFormsClient.csproj.CoreCompileInputs.cache
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\obj\Debug\WinFormsClient.csproj.CopyComplete
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\obj\Debug\SgClient1.exe
+C:\Users\Batman\source\repos\AAATest\AAA\SignalR\WinFormsClient\obj\Debug\SgClient1.pdb

@@ -42,9 +42,9 @@ function disconnect() {
 }
 
 //Send a message to server
-function sendMessage() {
+function sendMessage(msg) {
     console.log(simpleHubProxy);
     if(simpleHubProxy != null) {
-        simpleHubProxy.server.send('hello');
+        simpleHubProxy.server.send(msg);
     }
 }

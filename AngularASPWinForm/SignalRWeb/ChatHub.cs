@@ -77,9 +77,18 @@ namespace SignalRWeb
 
         public void Send(string msg)
         {
-            Clients.All.addMessage(_users[Context.ConnectionId], msg);
 
-            MessageReceived?.Invoke(Context.ConnectionId, msg);
+            Message message = Newtonsoft.Json.JsonConvert.DeserializeObject<Message>(msg);
+            var clientId = _users.FirstOrDefault(x => x.Value == message.SendTo).Key;
+
+            if(clientId != null)
+            {
+                Clients.Client(clientId).addMessage(_users[Context.ConnectionId], message.MessageText);
+                MessageReceived?.Invoke(Context.ConnectionId, message.MessageText);
+            }
+            //Clients.All.addMessage(_users[Context.ConnectionId], message.MessageText);
+
+         
         }
 
         #endregion        

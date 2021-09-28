@@ -1,16 +1,7 @@
-<button (click)="getData()">get data</button> 
-
-<p></p>
-
-{{data | json}}
-
-<p></p>
-
-<button (click)="getApple()">get Apple</button> 
-<p></p>
-<button (click)="getOrange()">get Orange</button> 
-
-
-<p></p>
-
-{{apple|json}}
+<ul>
+<li *ngFor="let media of observable | async">
+    <div class="text-left appointment-flex">{{media.id}}</div>
+    <div class="text-left appointment-flex">
+        <img height="100" width="140" src="data:image/png;base64,{{ media.img}}" />
+    </div>
+</ul>

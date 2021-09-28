@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 import { shareReplay } from 'rxjs/operators';
+import { Media } from '../models/media.model';
 
 @Injectable({
   providedIn: 'root'
@@ -33,4 +34,7 @@ export class FruitService {
     return this.cache[key];
   }
 
+  getMedia(){
+    return this.http.get<Media[]>('http://localhost:5000/api/Fruit/media');
+ }
 }

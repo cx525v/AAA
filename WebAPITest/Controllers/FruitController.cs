@@ -35,6 +35,27 @@ namespace WebAPITest.Controllers
         {
             return Ok(await _service.GetFruitByName(name));
         }
+
+        [HttpGet]
+        [Route("media/{id}")]
+        public async Task<IActionResult> GetMedia(int id)
+        {
+            return Ok(await _service.GetImage(id));
+        }
+
+        [HttpGet]
+        [Route("media")]
+        public async Task<IActionResult> GetMediaAll()
+        {
+            return Ok(await _service.GetAllImage());
+        }
+
+        [HttpPost]
+        [Route("media")]
+        public async Task<IActionResult> Post(string url)
+        {
+            return Ok(await _service.SaveMedia(url));
+        }
     }
 
 

@@ -19,6 +19,7 @@ namespace WebAPITest.Entity
         }
 
         public virtual DbSet<Fruit> Fruit { get; set; }
+        public virtual DbSet<Media> Media { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +35,13 @@ namespace WebAPITest.Entity
                     .IsFixedLength(true);
 
                 entity.Property(e => e.Price).HasColumnType("decimal(8, 0)");
+            });
+
+            modelBuilder.Entity<Media>(entity =>
+            {
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Img).IsRequired();
             });
 
             OnModelCreatingPartial(modelBuilder);

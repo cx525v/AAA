@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using WebAPITest.Entity;
 using WebAPITest.Models;
@@ -12,6 +13,11 @@ namespace WebAPITest.Service
     {
         Task<List<FruitModel>> GetFruits();
         Task<FruitModel> GetFruitByName(string name);
+
+        Task<Media> SaveMedia(string url);
+        Task<byte[]> GetImage(int id);
+
+        Task<List<Media>> GetAllImage();
     }
     public class FruitService: IFruitService
     {
@@ -45,6 +51,36 @@ namespace WebAPITest.Service
                 Name = result.Name,
                 Price = result.Price
             };
+        }
+
+        public async Task<Media> SaveMedia(string url)
+        {
+            byte[] imageAsByteArray;
+            using var webClient = new WebClient();
+            imageAsByteArray = webClient.DownloadData(new Uri(url));
+
+            var media = new Media
+            {
+                Img = imageAsByteArray
+            };
+
+            _dbContext.Media.Add(media);
+
+            await _dbContext.SaveChangesAsync();
+
+            return media;
+        }
+
+        public async Task<byte[]> GetImage(int id)
+        {
+            var media = await _dbContext.Media.FindAsync(id);
+            return media.Img;
+        }
+
+        public async Task<List<Media>> GetAllImage()
+        {
+            return await _dbContext.Media.ToListAsync();
+
         }
     }
 }

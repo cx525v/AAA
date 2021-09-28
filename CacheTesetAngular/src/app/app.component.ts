@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { FruitService } from './services/fruit.service';
 import { FruitCache } from './models/cache';
+import { Media } from './models/media.model';
 
 @Component({
   selector: 'app-root',
@@ -15,13 +16,19 @@ export class AppComponent implements OnInit{
   }
   
   fruitById: Fruit;
-  fruitCache: { [id: string]: FruitCache<Fruit[]> };
+  fruitCache: { [id: string]: FruitCache<Fruit> };
 
 
   data: any;
   apple: any;
-  ngOnInit(): void {
+  observable: Observable<Media[]>;
 
+  ngOnInit(): void {
+    this.getMedia();
+  }
+
+  getMedia() {
+    this.observable = this.service.getMedia();
   }
   getData() {
     this.service.getFruits().subscribe(x => this.data = x);
@@ -36,8 +43,8 @@ export class AppComponent implements OnInit{
   }
 
 setCacheItem(key: string, value: Observable<Fruit[]>): void {
-    const EXPIRES = Date.now() + (1000 * 60 * 60) / 2;
-    this.fruitCache[key] = { expires: EXPIRES, observable: value } as FruitCache<Fruit[]>;
+   // const EXPIRES = Date.now() + (1000 * 60 * 60) / 2;
+   // this.fruitCache[key] = { expires: EXPIRES, observable: value } as FruitCache<Fruit[]>;
 }
 
 deleteCacheItem(key: string) {

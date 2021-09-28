@@ -16,6 +16,10 @@
       {
          "Name": "[dbo].[Fruit]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Media]",
+         "ObjectType": 0
       }
    ],
    "UiHint": "LAPTOP-9I51CCO7.MyTestDb",
@@ -27,6 +31,7 @@
    "UseInflector": false,
    "UseLegacyPluralizer": false,
    "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
    "UseNoNavigations": false,
    "UseNoObjectFilter": false,
    "UseNodaTime": false,

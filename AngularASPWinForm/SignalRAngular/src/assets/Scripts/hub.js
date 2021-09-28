@@ -8,7 +8,7 @@ console.log('connect ...');
     //Load auto generated hub script dynamically and perform connection operation when loading completed
     //SignalR server location is specified by 'Url' input element, hub script must be loaded from the same location
     //For production, remove this call and uncomment the script block in the header part
-    $.getScript( "https://localhost:44369/signalr/hubs", function() {
+    $.getScript( "http://10.13.10.68:8083/signalr/hubs", function() {
 
        $.connection.hub.url ="https://localhost:44369/signalr";
 

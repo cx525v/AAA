@@ -50,7 +50,7 @@ namespace WebAPITest
           
             services.AddDbContext<MytestdbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("database")), ServiceLifetime.Transient);
             services.AddTransient<IFruitService, FruitService>();
-        }
+          }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

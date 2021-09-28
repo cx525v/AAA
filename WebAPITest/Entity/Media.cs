@@ -6,12 +6,9 @@ using System.Collections.Generic;
 
 namespace WebAPITest.Entity
 {
-    public partial class Fruit
+    public partial class Media
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal? Price { get; set; }
-
-
+        public byte[] Img { get; set; }
     }
 }
